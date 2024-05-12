@@ -6,8 +6,7 @@ app = Flask(__name__)
 
 # Load the model (this should be done once, not on every request)
 llm = AutoModelForCausalLM.from_pretrained(
-    "TheBloke/Llama-2-7B-Chat-GGML",
-    model_file="llama-2-7b-chat.ggmlv3.q4_K_M.bin",
+    "TheBloke/LLaMA2-13B-Tiefighter-GGUF",
     gpu_layers=50
 )
 
