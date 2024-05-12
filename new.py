@@ -11,7 +11,7 @@ def generate_text():
     content = request.json
     prompt = content['prompt']
     response = llm(prompt)
-    print(response)
+    print(response.encode('utf-8').decode('utf-8'))
     return jsonify({"response": response})
 
 if __name__ == '__main__':
