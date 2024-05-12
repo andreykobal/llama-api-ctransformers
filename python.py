@@ -7,7 +7,9 @@ app = Flask(__name__)
 # Load the model (this should be done once, not on every request)
 llm = AutoModelForCausalLM.from_pretrained(
     "TheBloke/LLaMA2-13B-Tiefighter-GGUF",
-    gpu_layers=50
+    gpu_layers=50,
+    context_length=4096, 
+    max_new_tokens=4096
 )
 
 # Create a lock
